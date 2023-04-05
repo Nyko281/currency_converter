@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Currency</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  
+  <nav class="navbar navbar-light">
+    <div class="container">
+        <form class="form-inline">
+            <div class="custom-control_custom-switch">
+                <input type="checkbox" class="custom-control-input switchSlider" id="switchToDark">
+                
+                <label class="custom-control-label" for="switchToDark"><span class="slider round" id="spanChange">Light Mode</span></label>
+            </div>
+        </form>
+    </div>
+  </nav>
+
+  <body>
+      <h1>Währungsrechner</h1>
+      <h2>Alle Währungskurse auf dieser Seite stammen von der Europäischen Zentralbank und werden täglich aktualisiert</h2>
+
+      <div class="content_field">
+
+        <div class="currency_field">
+          <div class="currency_choice" id="currency_choice">
+            <input list="first_currency_list" id="first_currency", value="EUR">
+              <datalist name="first_currency" id="first_currency_list">
+                <option>EUR</option>
+                <option>USD</option>
+                <option>CHF</option>
+                <option>AUD</option>
+                <option>BGN</option>
+                <option>BRL</option>
+                <option>CAD</option>
+                <option>CNY</option>
+                <option>CZK</option>
+                <option>DKK</option>
+                <option>GBP</option>
+                <option>HKD</option>
+                <option>HRK</option>
+                <option>HUF</option>
+                <option>IDR</option>
+                <option>ILS</option>
+                <option>INR</option>
+                <option>ISK</option>
+                <option>JPY</option>
+                <option>KRW</option>
+                <option>MXN</option>
+                <option>MYR</option>
+                <option>NOK</option>
+                <option>NZD</option>
+                <option>PHP</option>
+                <option>PLN</option>
+                <option>RON</option>
+                <option>RUB</option>
+                <option>SEK</option>
+                <option>SGD</option>
+                <option>THB</option>
+                <option>TRY</option>
+                <option>ZAR</option>
+            </datalist>
+            <input list="second_currency_list" id="second_currency" value="USD">
+              <datalist name="second_currency" id="second_currency_list">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>CHF</option>
+                <option>AUD</option>
+                <option>BGN</option>
+                <option>BRL</option>
+                <option>CAD</option>
+                <option>CNY</option>
+                <option>CZK</option>
+                <option>DKK</option>
+                <option>GBP</option>
+                <option>HKD</option>
+                <option>HRK</option>
+                <option>HUF</option>
+                <option>IDR</option>
+                <option>ILS</option>
+                <option>INR</option>
+                <option>ISK</option>
+                <option>JPY</option>
+                <option>KRW</option>
+                <option>MXN</option>
+                <option>MYR</option>
+                <option>NOK</option>
+                <option>NZD</option>
+                <option>PHP</option>
+                <option>PLN</option>
+                <option>RON</option>
+                <option>RUB</option>
+                <option>SEK</option>
+                <option>SGD</option>
+                <option>THB</option>
+                <option>TRY</option>
+                <option>ZAR</option>
+            </datalist>  
+          </div>
+
+          <div>
+              <p class="currency_rate" id="currency_rate">Währung 1 = Währung 2</p>    
+          </div>
+          
+          <div class="currency_sums" id="currency_sums">
+              <input type="number" class="currency_input" id="currency_input" name="currency_input" placeholder="0000" min="0">
+              <button class="calc_btn" id="calc_btn">Berechnen</button>
+              <span type="number" class="currency_output" id="currency_output">0000</span>
+          </div>
+          <div class="details"><button class="details_btn" id="details_btn">Details</button></div>
+        </div>
+
+        <div class="detail_view" id="detail_view">
+          <div class="graph" id="graph"></div>
+
+          <div class="time_btns" id="time_btns">
+              <input type="radio" class="week" id="week" name="period" value="7" checked>
+              <label for="week">7 Tage</label>
+
+              <input type="radio" class="month" id="month" name="period" value="30">
+              <label for="month">30 Tage</label>
+            
+              <input type="radio" class="year" id="year" name="period" value="365">
+              <label for="year">365 Tage</label>
+          </div>
+
+          <div class="third_cur" id="third_cur">
+            <input list="third_currency_list" id="third_currency">
+              <datalist name="third_currency" id="third_currency_list">
+                <option>EUR</option>
+                <option>USD</option>
+                <option>CHF</option>
+                <option>AUD</option>
+                <option>BGN</option>
+                <option>BRL</option>
+                <option>CAD</option>
+                <option>CNY</option>
+                <option>CZK</option>
+                <option>DKK</option>
+                <option>GBP</option>
+                <option>HKD</option>
+                <option>HRK</option>
+                <option>HUF</option>
+                <option>IDR</option>
+                <option>ILS</option>
+                <option>INR</option>
+                <option>ISK</option>
+                <option>JPY</option>
+                <option>KRW</option>
+                <option>MXN</option>
+                <option>MYR</option>
+                <option>NOK</option>
+                <option>NZD</option>
+                <option>PHP</option>
+                <option>PLN</option>
+                <option>RON</option>
+                <option>RUB</option>
+                <option>SEK</option>
+                <option>SGD</option>
+                <option>THB</option>
+                <option>TRY</option>
+                <option>ZAR</option>
+            </datalist>
+
+            <span>
+              <span class="add"><button class="add_btn" id="add_btn">add</button></span>
+            </span>
+
+          </div>
+
+          <div>
+            <div class="hide"><button class="hide_btn" id="hide_btn">hide</button></div>
+          </div>
+        </div>
+
+      </div>
+
+    <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

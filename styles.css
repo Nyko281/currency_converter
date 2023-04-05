@@ -1,0 +1,221 @@
+body{
+    font-family: sans-serif;
+    background-image: url("blue-white.jpg");
+    background-position: center;
+    background-size: auto;
+
+}
+
+h1 {
+    font-weight: bold;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+}
+
+
+#first_currency {
+    width: 25%;
+}
+
+#second_currency {
+    width: 25%;
+}
+
+
+.content_field {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.currency_choice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.currency_field {
+    width: 25%;
+    min-width: 300px;
+    height: 25%;
+    min-height: 25%; 
+    border-color: grey;
+    background-color: rgb(220, 240, 248);
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 2em;
+    padding: 1.5em;
+}
+
+.currency_input {
+    width: 25%;
+}
+
+.currency_output {
+    width: 25%;
+    border-color: grey;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    text-align: right;
+    color: black;
+}
+
+.currency_rate {
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.currency_sums {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    margin-top: 1em;
+    display: flex;
+    justify-content: right;
+}
+
+.details_btn {
+    font-size: 0.7em;
+}
+
+.detail_view {
+    display: none;
+    flex-direction: column;
+    resize: both;
+    overflow: auto;
+    visibility: hidden;
+    width: 25%;
+    min-width: 300px; 
+    height: 25%;
+    min-height: 50%; 
+    border-color: grey;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 2em;
+    padding: 1.5em;     
+}
+
+.graph {
+    display: flex;
+    resize: both;
+    overflow: auto;
+}
+
+.hide {
+    display: flex;
+    justify-content: right;
+}
+
+.hide_btn {
+    font-size: 0.7em;
+}
+
+.third_cur {
+    margin-top: 1em;
+}
+
+.time_btns {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Ab Hier wird alles, die zu Dark Mode Design gehören definiert */
+[theme="dark"] { 
+    background-image: url("black.jpg");
+    background-position: center;
+    background-size: auto;
+    color: #fff;
+
+}
+
+[theme="dark"] .currency_field {
+    background-color: rgb(87, 87, 87);
+
+}
+
+/* Ab hier wird alles zum SwitchSlider definiert*/
+#spanChange {
+    bottom: 0;
+    left: 40;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.custom-control_custom-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.custom-control_custom-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: blue;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+[theme="dark"] .slider {
+    background-color: rgb(90, 90, 94);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+[theme="dark"] .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 31px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
